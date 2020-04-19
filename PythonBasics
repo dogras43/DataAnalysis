@@ -1,0 +1,119 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
+
+
+import numpy as np
+import pandas as pd
+
+
+# In[3]:
+
+
+new_range=pd.Series(range(5))
+new_range
+
+
+# In[4]:
+
+
+print(np.__version__)
+
+
+# In[6]:
+
+
+np.array(range(10))
+
+
+# In[7]:
+
+
+np.full((3, 3), True, dtype=bool)
+
+
+# In[17]:
+
+
+arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+arr[arr%2==1]=-1
+arr
+
+
+# In[21]:
+
+
+arr = np.arange(10)
+out = np.where(arr % 2 == 1, -1, arr)
+print(arr)
+arr
+out
+
+
+# In[25]:
+
+
+arr = np.arange(10)
+arr.reshape(5, 2) 
+
+
+# In[27]:
+
+
+a = np.arange(15)
+a[5:11]
+
+
+# In[34]:
+
+
+a = np.arange(15)
+a[5:11]
+
+
+# In[35]:
+
+
+string_data = pd.Series(['aa','bb',np.nan, 'cc'])
+string_data
+
+
+# In[36]:
+
+
+string_data.isnull()
+
+
+# In[37]:
+
+
+string_data.dropna()
+
+
+# In[38]:
+
+
+string_data
+
+
+# In[44]:
+
+
+df = pd.DataFrame(np.random.randn(7,3))
+df.iloc[:4, 1] = np.nan
+df.iloc[:2, 2] = np.nan
+df
+
+
+# In[48]:
+
+
+df.fillna(df[0].mean())
+
+
+# In[ ]:
+
+
+
+
